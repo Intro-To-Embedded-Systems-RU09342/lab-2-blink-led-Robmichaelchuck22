@@ -67,13 +67,13 @@
 int main(void)
 {
   WDTCTL = WDTPW + WDTHOLD;                 // Stop watchdog timer
-  P1DIR |= BIT6;                            // Set P1.0 to output direction
+  P1DIR |= BIT6;                            // Set P1.6 to output direction
 
   for (;;)
   {
     volatile unsigned int i;
 
-    P1OUT ^= BIT6;                          // Toggle P1.0
+    P1OUT ^= BIT6;                          // Toggle P1.6
 
     i = 50000;                              // Delay
     do (i--);
